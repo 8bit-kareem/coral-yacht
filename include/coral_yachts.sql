@@ -7,9 +7,11 @@
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
+SET FOREIGN_KEY_CHECKS=0;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "+01:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -18,7 +20,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `coral yachts`
+-- Database: `kareem`
 --
 
 -- --------------------------------------------------------
@@ -126,6 +128,8 @@ ALTER TABLE `betaling`
 ALTER TABLE `yachts`
   ADD CONSTRAINT `yachts_ibfk_1` FOREIGN KEY (`Yacht naam`) REFERENCES `betaling` (`Yacht naam`);
 COMMIT;
+
+SET FOREIGN_KEY_CHECKS=1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
